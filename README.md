@@ -2,12 +2,8 @@
 
 Scripts to install my core utils on different operating systems
 
-## Commands
+## Usage
 
 ```bash
-# Tmux
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/toscm/installers/main/tmux.sh)"
-
-# Helix
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/toscm/installers/main/helix)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/toscm/installers/main/ubuntu22)"
 ```

@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+# Version: 1.0.0
+
+# Libs
+sudo apt update
+sudo apt install \
+	libcurl4-openssl-dev \
+	libfreetype6-dev \
+	libjpeg-dev \
+	libpng-dev \
+	libpq-dev \
+	libsodium-dev \
+	libssl-dev \
+	libtiff5-dev \
+	libcairo2-dev
+
+# Repos
+sudo apt updates
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:maveonair/helix-editor
+sudo add-apt-repository ppa:neovim-ppa/stable
+
+# Apps
+# 	w3m: tested 09/23 and better than lynx, links, elinks and browsh
+#   texlive-basic: texlive-full has multiple gigabytes, so only install texlive-basic by default
+sudo apt update
+sudo apt install \
+	curl \
+	git \
+	helix \
+	kakoune \
+	make \
+	neovim \
+	pandoc \
+	ssh \
+	texlive-basic \
+	tmux \
+	w3m \
+	wget
+
+# Config
+git config --global user.name "Tobias Schmidt"
+git config --global user.email "tobias.schmidt331@gmail.com"
