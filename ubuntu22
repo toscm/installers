@@ -23,7 +23,7 @@ sudo add-apt-repository ppa:neovim-ppa/stable
 
 # Apps
 # 	w3m: tested 09/23 and better than lynx, links, elinks and browsh
-#   texlive-basic: texlive-full has multiple gigabytes, so only install texlive-basic by default
+#   texlive-full: texlive-full has multiple gigabytes, so don't install by default
 sudo apt update
 sudo apt install \
 	curl \
@@ -34,7 +34,6 @@ sudo apt install \
 	neovim \
 	pandoc \
 	ssh \
-	texlive-basic \
 	tmux \
 	w3m \
 	wget
