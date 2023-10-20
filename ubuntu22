@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Version: 1.0.0
+# Version: 1.1.0
 
 # Libs
 sudo apt update
@@ -42,3 +42,7 @@ sudo apt install \
 # Config
 git config --global user.name "Tobias Schmidt"
 git config --global user.email "tobias.schmidt331@gmail.com"
+curl -o ~/.bash_aliases "https://raw.githubusercontent.com/toscm/installers/main/.bash_aliases"
+curl -o ~/.bash_aliases "https://raw.githubusercontent.com/toscm/installers/main/.bashrc"
+
+
