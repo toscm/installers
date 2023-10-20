@@ -16,7 +16,7 @@ sudo apt install \
 	libcairo2-dev
 
 # Repos
-sudo apt updates
+sudo apt update
 sudo apt install software-properties-common
 sudo add-apt-repository ppa:maveonair/helix-editor
 sudo add-apt-repository ppa:neovim-ppa/stable
