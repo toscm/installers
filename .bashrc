@@ -60,3 +60,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Configure environment
+export VISUAL=vi
+
