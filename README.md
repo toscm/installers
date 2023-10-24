@@ -8,4 +8,5 @@ Scripts to install my core utils on different operating systems
 tmp_dir=$(mktemp -d)
 git clone --depth 1 https://github.com/toscm/installers.git "$tmp_dir"
 bash "$tmp_dir/ubuntu22"
+rm -rf $tmp_dir
 ```
