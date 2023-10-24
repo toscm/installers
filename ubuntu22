@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
-# Version: 1.3.1
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+BLUE='\033[0;34m'
+NORM='\033[0m'
+
+title() {
+	echo -e "${BLUE}$@${NORM}";
+}
 
 ppas=(
     maveonair/helix-editor
@@ -36,9 +42,6 @@ pkgs=( # actual user packages
 skip=( # packages skipped intentionally
 	texlive-full # multiple gigabytes
 )
-BLUE='\033[0;34m'
-NORM='\033[0m'
-title() { echo -e "${BLUE}$@${NORM}"; }
 
 # Update list of available packages
 title "Calling 'apt update'"
@@ -58,7 +61,7 @@ for ppa in "${ppas[@]}"; do
         sudo add-apt-repository -y "ppa:$ppa"
         apt_update_required=1
     else
-        echo "ppa:$ppa already exists"
+        echo "ppa:$ppa exists already"
     fi
 done
 if [ $apt_update_required -eq 1 ]; then
@@ -76,9 +79,6 @@ git config --global user.email "tobias.schmidt331@gmail.com"
 
 # Configure bash
 title "Creating '.bashrc', '.bash_aliases' and '.inputrc'"
-tmp_dir=$(mktemp -d)
-git clone --depth 1 https://github.com/toscm/installers.git "$tmp_dir"
-cp "$tmp_dir/.bash_aliases" ~/.bash_aliases
-cp "$tmp_dir/.bashrc" ~/.bashrc
-cp "$tmp_dir/.inputrc" ~/.inputrc
-rm -rf "$tmp_dir"
+cp "$SCRIPT_DIR/.bash_aliases" ~/.bash_aliases
+cp "$SCRIPT_DIR/.bashrc" ~/.bashrc
+cp "$SCRIPT_DIR/.inputrc" ~/.inputrc

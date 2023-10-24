@@ -5,5 +5,7 @@ Scripts to install my core utils on different operating systems
 ## Usage
 
 ```bash
-bash -c "$(curl -H 'Cache-Control: no-cache, no-store' -fsSL https://raw.githubusercontent.com/toscm/installers/main/ubuntu22)"
+tmp_dir=$(mktemp -d)
+git clone --depth 1 https://github.com/toscm/installers.git "$tmp_dir"
+bash "$tmp_dir/ubuntu22"
 ```
