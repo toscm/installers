@@ -23,6 +23,8 @@ deps=( # dependencies for this script, those must be installed first
 pkgs=( # actual user packages
 	helix
 	kakoune
+	neovim
+	micro
 	libcairo2-dev
 	libcurl4-openssl-dev
 	libfreetype6-dev
@@ -33,7 +35,6 @@ pkgs=( # actual user packages
 	libssl-dev
 	libtiff5-dev
 	make
-	neovim
 	pandoc
 	tmux
 	w3m # tested 09/23 and better than lynx, links, elinks and browsh
