@@ -7,13 +7,12 @@ if [ "$#" -ne 1 ]; then
 fi
 
 username=$1
-scriptdir=$(dirname "$0")
 
 sudo useradd --create-home $username
 sudo passwd  $username
 sudo usermod --shell /bin/bash $username
 sudo mkdir /home/$username/.ssh
-sudo cp $scriptdir/authorized_keys /home/$username/.ssh/
+sudo echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKFMHdKctvP9YLN2krRuz6GQWLJxO063Om1FAuKTJ7U5 tobi@tux15' >> /home/$username/.ssh/authorized_keys
 sudo chown -R $username:$username /home/$username/.ssh
 sudo chmod 700 /home/$username/.ssh
 sudo chmod 600 /home/$username/.ssh/authorized_keys
