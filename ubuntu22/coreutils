@@ -79,7 +79,7 @@ git config --global user.name "Tobias Schmidt"
 git config --global user.email "tobias.schmidt331@gmail.com"
 
 # Configure bash
-title "Creating '.bashrc', '.bash_aliases' and '.inputrc'"
+title "Creating '~/.bashrc', '~/.bash_aliases' and '~/.inputrc'"
 cp "$SCRIPT_DIR/.bash_aliases" ~/.bash_aliases
 cp "$SCRIPT_DIR/.bashrc" ~/.bashrc
 cp "$SCRIPT_DIR/.inputrc" ~/.inputrc
