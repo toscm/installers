@@ -52,4 +52,4 @@ fi
 
 # Configure environment
 PS1='\$ '
-export VISUAL=vi
+export VISUAL=micro
